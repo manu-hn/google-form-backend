@@ -1,6 +1,6 @@
 /.env
 /node_modules
-/src/controller
+/src/connection
 /src/utils
 /src/models
-/src/connection
+/src/routes
