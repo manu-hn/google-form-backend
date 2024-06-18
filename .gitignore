@@ -2,5 +2,5 @@
 /node_modules
 /src/connection
 /src/utils
-/src/models
+/src/controller
 /src/routes
