@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const GoogleFormSchema = new Schema({
-    submittedFromEmail: {
+    emailChecked: {
         type: String,
 
     },
@@ -16,19 +16,18 @@ const GoogleFormSchema = new Schema({
     lastName: {
         type: String,
         required: true,
-
     },
     contactNumber: {
         type: String,
         required: true,
         unique: true
     },
-    alternameContactNumber: {
+    alternateContactNumber: {
         type: String,
         required: true,
         unique: true
     },
-    emailId: {
+    emailID: {
         type: String,
         required: true,
         unique: true
@@ -41,18 +40,18 @@ const GoogleFormSchema = new Schema({
     age: {
         type: Number,
         required: true,
-       
+
     },
     gender: {
         type: String,
         required: true,
-        enum: ['male', 'female', 'prefer not to say'],
+        enum: ['Male', 'Female', 'Prefer Not To Say'],
 
     },
     maritalStatus: {
         type: String,
         required: true,
-        enum: ['married', 'unmarried', 'prefer not to say'],
+        enum: ['Married', 'Unmarried', 'Prefer Not To Say'],
 
     },
     nationality: {
@@ -64,16 +63,11 @@ const GoogleFormSchema = new Schema({
         required: true
     },
     currentResidentialAddress: {
-        street: { type: String, required: true },
-        city: { type: String, required: true },
-        state: { type: String, required: true },
-        zipcode: { type: String, required: true },
+        type: String, required: true
+
     },
     permanentResidentialAddress: {
-        street: { type: String, required: true },
-        city: { type: String, required: true },
-        state: { type: String, required: true },
-        zipcode: { type: String, required: true },
+        type: String, required: true
     },
     currentLocation: {
         type: String, required: true
@@ -81,18 +75,18 @@ const GoogleFormSchema = new Schema({
     preferredLocation: {
         type: String, required: true
     },
-    havePassport: {
+    passport: {
         type: Boolean, required: true
     },
 
     passportNumber: {
         type: String, required: true
     },
-    passPortCopy: {
+    passportCopy: {
         type: String,
 
     },
-    adharCardNumber: {
+    adhaarCardNumber: {
         type: String, required: true, unique: true,
     },
     adharCardCopy: {
@@ -104,31 +98,31 @@ const GoogleFormSchema = new Schema({
     panCardCopy: {
         type: String, required: true
     },
-    drivingLicense: {
+    drivingLicenseDetails: {
         type: Boolean,
     },
     drivingLicenseCopy: {
         type: String,
     },
-    voterIdCardNumber: {
+    voterIdDetails: {
         type: String,
     },
-    voterIdCardCopy: {
+    voterIdCopy: {
         type: String,
     },
     photograph: {
         type: String, required: true
     },
-    linkedInProfile: {
+    linkedIn: {
         type: String, required: true
     },
-    resumeUpdated: {
+    resume: {
         type: String, required: true
     },
-    socialMediaLinks: {
+    socialLinks: {
         type: String, required: true
     },
-    portfolioWebLink: {
+    onlinePortfolioLink: {
         type: String, required: true
     },
     skills: {
@@ -141,17 +135,19 @@ const GoogleFormSchema = new Schema({
     educationCourse: {
         type: String, required: true
     },
-    educationSpecialization: {
+    specialization: {
         type: String, required: true
     },
     educationInstitution: {
         type: String, required: true
     },
-    educationYearOfCompletion: {
+    yearOfCompletion: {
         type: Date, required: true
     },
-    educationPercentage: {
-        type: String, required: true
+    
+    passPercentage: {
+        type: String,
+        required: true
     },
     proofOfEducationCompletion: {
         type: String, required: true
@@ -162,35 +158,35 @@ const GoogleFormSchema = new Schema({
     certificationsObtained: {
         type: String, required: true
     },
-    nameOfCertificateIssuingAuthority: {
+    certificationIssuingAuthority: {
         type: String, required: true
     },
-    certificationYearOfCompletion: {
+    certificationCompletionDate: {
         type: Date, required: true
     },
     proofOfCertification: {
         type: String, required: true
     },
-    expectedJoiningDate: {
+    dateOfJoin: {
         type: Date, required: true
     },
-    areYouFresher: {
-        type: Boolean, required: true
+    fresher: {
+        type: String, required: true, enum : ['YES', 'NO']
     },
-    consentToConductBackgroundCheck: {
-        type: String, required: true, enum: ['true', 'false', 'maybe']
+    backgroundChecks: {
+        type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
     },
-    consentToAlchoholTest: {
-        type: String, required: true, enum: ['true', 'false', 'maybe']
+    drugAndAlcoholTest: {
+        type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
     },
-    anyCriminalConviction: {
-        type: Boolean, required: true, enum: [true, false],
+    criminalCases: {
+        type: String, required: true, enum: ['YES', 'NO',],
     },
-    detailsOfCriminalConviction: {
+    detailsOfCriminalCases: {
         type: String, required: true,
     },
-    submitFormAndAcknowledge: {
-        type: Boolean, required: true, enum: [true, false],
+    acknowledge: {
+        type: Boolean, required: true, enum: ['YES', 'NO',],
     }
 
 });
