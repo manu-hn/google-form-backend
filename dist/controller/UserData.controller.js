@@ -1,5 +1,4 @@
-require('module-alias/register');
-const UserDataModel = require("@model/UserData.model.js");
+const UserDataModel = require("../models/UserData.model.js");
 const {
   StatusCodes: {
     OK,
