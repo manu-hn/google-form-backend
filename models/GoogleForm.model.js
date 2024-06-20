@@ -25,7 +25,7 @@ const GoogleFormSchema = new Schema({
     contactNumber: {
         type: String,
         required: true,
-        unique: true
+        
     },
     alternateContactNumber: {
         type: String,
@@ -35,12 +35,12 @@ const GoogleFormSchema = new Schema({
     emailID: {
         type: String,
         required: true,
-        unique: true
+        
     },
     dateOfBirth: {
         type: Date,
         required: true,
-        unique: true
+        
     },
     age: {
         type: Number,
@@ -85,7 +85,7 @@ const GoogleFormSchema = new Schema({
     },
 
     passportNumber: {
-        type: String, required: true
+        type: String, 
     },
     passportCopy: {
         type: String,
@@ -95,13 +95,13 @@ const GoogleFormSchema = new Schema({
         type: String, required: true, unique: true,
     },
     adharCardCopy: {
-        type: String, required: true
+        type: String,
     },
     panCardNumber: {
         type: String, required: true, unique: true,
     },
     panCardCopy: {
-        type: String, required: true
+        type: String, 
     },
     drivingLicenseDetails: {
         type: String, enum: ['YES', 'NO']
