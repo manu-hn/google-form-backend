@@ -2,8 +2,13 @@ const { Schema, model } = require('mongoose');
 
 const GoogleFormSchema = new Schema({
     emailChecked: {
-        type: String,
+        type: String || Boolean,
 
+    },
+
+    loggedInEmail: {
+        type: String,
+        required: true,
     },
     firstName: {
         type: String,
@@ -25,7 +30,7 @@ const GoogleFormSchema = new Schema({
     alternateContactNumber: {
         type: String,
         required: true,
-        unique: true
+
     },
     emailID: {
         type: String,
@@ -76,7 +81,7 @@ const GoogleFormSchema = new Schema({
         type: String, required: true
     },
     passport: {
-        type: Boolean, required: true
+        type: String, required: true, enum: ['YES', 'NO'],
     },
 
     passportNumber: {
@@ -99,13 +104,13 @@ const GoogleFormSchema = new Schema({
         type: String, required: true
     },
     drivingLicenseDetails: {
-        type: Boolean,
+        type: String, enum: ['YES', 'NO']
     },
     drivingLicenseCopy: {
         type: String,
     },
     voterIdDetails: {
-        type: String,
+        type: String, enum: ['YES', 'NO']
     },
     voterIdCopy: {
         type: String,
@@ -144,7 +149,7 @@ const GoogleFormSchema = new Schema({
     yearOfCompletion: {
         type: Date, required: true
     },
-    
+
     passPercentage: {
         type: String,
         required: true
@@ -153,7 +158,7 @@ const GoogleFormSchema = new Schema({
         type: String, required: true
     },
     anyCertifications: {
-        type: Boolean, required: true
+        type: String, required: true, enum: ['YES', 'NO'],
     },
     certificationsObtained: {
         type: String, required: true
@@ -171,7 +176,7 @@ const GoogleFormSchema = new Schema({
         type: Date, required: true
     },
     fresher: {
-        type: String, required: true, enum : ['YES', 'NO']
+        type: String, required: true, enum: ['YES', 'NO']
     },
     backgroundChecks: {
         type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
@@ -186,7 +191,7 @@ const GoogleFormSchema = new Schema({
         type: String, required: true,
     },
     acknowledge: {
-        type: Boolean, required: true, enum: ['YES', 'NO',],
+        type: String, required: true, enum: ['YES', 'NO',],
     }
 
 });
