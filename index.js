@@ -1,12 +1,12 @@
 const express = require('express');
 const { config } = require('dotenv');
-require('module-alias/register');
-require("@connection/GoogleForm.connection.js");
-const GoogleFormROutes = require("@routes/GoogleForm.routes.js");
-const UserDataRoutes = require("@routes/UserData.routes.js");
+require("./connection/GoogleForm.connection.js");
+const GoogleFormROutes = require("./routes/GoogleForm.routes.js");
+const UserDataRoutes = require("./routes/UserData.routes.js");
 const { StatusCodes: { NOT_FOUND, INTERNAL_SERVER_ERROR }, } = require('http-status-codes');
 const cors = require('cors');
 config();
+
 const PORT = process.env.CONNECTION_PORT || 5000;
 
 

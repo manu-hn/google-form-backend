@@ -1,5 +1,5 @@
-require('module-alias/register');
-const GoogleFormModel = require("@model/GoogleForm.model.js");
+
+const GoogleFormModel = require("../models/GoogleForm.model.js");
 const { StatusCodes: { OK } } = require('http-status-codes');
 
 
