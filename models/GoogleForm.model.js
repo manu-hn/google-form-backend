@@ -25,7 +25,7 @@ const GoogleFormSchema = new Schema({
     contactNumber: {
         type: String,
         required: true,
-        
+
     },
     alternateContactNumber: {
         type: String,
@@ -35,12 +35,12 @@ const GoogleFormSchema = new Schema({
     emailID: {
         type: String,
         required: true,
-        
+
     },
     dateOfBirth: {
         type: Date,
         required: true,
-        
+
     },
     age: {
         type: Number,
@@ -85,7 +85,7 @@ const GoogleFormSchema = new Schema({
     },
 
     passportNumber: {
-        type: String, 
+        type: String,
     },
     passportCopy: {
         type: String,
@@ -101,7 +101,7 @@ const GoogleFormSchema = new Schema({
         type: String, required: true, unique: true,
     },
     panCardCopy: {
-        type: String, 
+        type: String,
     },
     drivingLicenseDetails: {
         type: String, enum: ['YES', 'NO']
@@ -177,6 +177,102 @@ const GoogleFormSchema = new Schema({
     },
     fresher: {
         type: String, required: true, enum: ['YES', 'NO']
+    },
+
+    totalExperience: {
+        type: String, required: true,
+    },
+    organizationName: {
+        type: String, required: true,
+    },
+    jobTitle: {
+        type: String, required: true,
+    },
+    empStartDate: {
+        type: Date, required: true,
+    },
+    empEndDate: {
+        type: Date, required: true,
+    },
+    rolesAndResponsibilities: {
+        type: String, required: true,
+    },
+    reasonForLeaving: {
+        type: String, required: true,
+    },
+    currentCTC: {
+        type: String, required: true,
+    },
+    expectedCTC: {
+        type: String, required: true,
+    },
+    noticePeriod: {
+        type: String, required: true,
+    },
+    salarySlips: {
+        type: String, required: true,
+    },
+    bankStatements: {
+        type: String, required: true,
+    },
+    offerLetter: {
+        type: String, required: true,
+    },
+    incrementLetter: {
+        type: String, required: true,
+    },
+    experienceCertificate: {
+        type: String, required: true,
+    },
+
+
+    servingNoticePeriod: {
+        type: String, required: true, enum: ['YES', 'NO',],
+    },
+    lastWorkingDate: {
+        type: Date, required: true,
+    },
+    anyExistingOffers: {
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+    },
+    existingOfferOrganizationName: {
+        type: String, required: true,
+    },
+    proofOfExistingOffer: {
+        type: String, required: true,
+    },
+    haveYouAcceptedTheOffer: {
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+    },
+    dateAcceptedTheOffer: {
+        type: Date, required: true,
+    },
+    proposedCTC: {
+        type: String, required: true,
+    },
+    referenceContactPersonName: {
+        type: String, required: true,
+    },
+    referenceContactPersonDesignation: {
+        type: String, required: true,
+    },
+    referenceContactPersonContact: {
+        type: String, required: true,
+    },
+    referenceContactPersonEmailID: {
+        type: String, required: true,
+    },
+    referenceContactPersonProfessionalRelationship: {
+        type: String, required: true,
+    },
+    referenceCheckDate: {
+        type: Date, required: true,
+    },
+    employmentVerificationConsent: {
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+    },
+    authorizationToContactReferences: {
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
     },
     backgroundChecks: {
         type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
