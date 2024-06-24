@@ -242,7 +242,7 @@ const GoogleFormSchema = new Schema({
         type: String, required: true,
     },
     haveYouAcceptedTheOffer: {
-        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+        type: String, required: true, 
     },
     dateAcceptedTheOffer: {
         type: Date, required: true,
