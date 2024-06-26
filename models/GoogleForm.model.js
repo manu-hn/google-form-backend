@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const GoogleFormSchema = new Schema({
     emailChecked: {
-        type: String || Boolean,
+        type: Schema.Types.Mixed,
 
     },
 
@@ -40,6 +40,7 @@ const GoogleFormSchema = new Schema({
     dateOfBirth: {
         type: Date,
         required: true,
+        unique: false,
 
     },
     age: {
@@ -180,99 +181,99 @@ const GoogleFormSchema = new Schema({
     },
 
     totalExperience: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     organizationName: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     jobTitle: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     empStartDate: {
-        type: Date, required: true,
+        type: Schema.Types.Mixed, required: true, default: 'N/A',
     },
     empEndDate: {
-        type: Date, required: true,
+        type: Schema.Types.Mixed, required: true, default: 'N/A',
     },
     rolesAndResponsibilities: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     reasonForLeaving: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     currentCTC: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     expectedCTC: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     noticePeriod: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     salarySlips: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     bankStatements: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     offerLetter: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     incrementLetter: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     experienceCertificate: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
 
 
     servingNoticePeriod: {
-        type: String, required: true, enum: ['YES', 'NO',],
+        type: String, required: true, enum: ['YES', 'NO',], default: "NO"
     },
     lastWorkingDate: {
-        type: Date, required: true,
+        type: Schema.Types.Mixed, required: true, default: 'N/A',
     },
     anyExistingOffers: {
-        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     existingOfferOrganizationName: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     proofOfExistingOffer: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     haveYouAcceptedTheOffer: {
-        type: String, required: true, 
+        type: String, required: true, default: "N/A"
     },
     dateAcceptedTheOffer: {
-        type: Date, required: true,
+        type: Date, required: true, default: new Date(),
     },
     proposedCTC: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceContactPersonName: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceContactPersonDesignation: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceContactPersonContact: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceContactPersonEmailID: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceContactPersonProfessionalRelationship: {
-        type: String, required: true,
+        type: String, required: true, default: "N/A"
     },
     referenceCheckDate: {
-        type: Date, required: true,
+        type: Date, required: true, default: new Date(),
     },
     employmentVerificationConsent: {
-        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     authorizationToContactReferences: {
-        type: String, required: true, enum: ['YES', "NO", 'MAYBE'],
+        type: String, required: true, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     backgroundChecks: {
         type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
