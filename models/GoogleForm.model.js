@@ -36,7 +36,7 @@ const GoogleFormSchema = new Schema({
 
     },
     dateOfBirth: {
-        type: Date,
+        type: Schema.Types.Mixed,
         required: true,
         unique: false,
 
