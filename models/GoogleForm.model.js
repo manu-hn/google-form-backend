@@ -226,13 +226,13 @@ const GoogleFormSchema = new Schema({
 
 
     servingNoticePeriod: {
-        type: String, enum: ['YES', 'NO',], default: "NO"
+        type: Schema.Types.Mixed, enum: ['YES', 'NO',], default: "NO"
     },
     lastWorkingDate: {
         type: Schema.Types.Mixed, required: true, default: 'N/A',
     },
     anyExistingOffers: {
-        type: String, enum: ['YES', "NO", 'MAYBE'], default: "NO"
+        type: Schema.Types.Mixed, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     existingOfferOrganizationName: {
         type: String, default: "N/A"
@@ -265,13 +265,13 @@ const GoogleFormSchema = new Schema({
         type: String, default: "N/A"
     },
     referenceCheckDate: {
-        type: Date, default: new Date(),
+        type: Schema.Types.Mixed, default: "N/A",
     },
     employmentVerificationConsent: {
-        type: String, enum: ['YES', "NO", 'MAYBE'], default: "NO"
+        type: Schema.Types.Mixed, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     authorizationToContactReferences: {
-        type: String, enum: ['YES', "NO", 'MAYBE'], default: "NO"
+        type: Schema.Types.Mixed, enum: ['YES', "NO", 'MAYBE'], default: "NO"
     },
     backgroundChecks: {
         type: String, required: true, enum: ['YES', 'NO', 'MAY BE']
